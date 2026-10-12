@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Pasandida Aurat ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --pink: #ff9be8;
+  --light: #ffe0f7;
+  --purple: #bb75ff;
+  --bg: #0b0612;
+  --card: #160c20;
+}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #fff0ff;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 20% 15%, #7b2b8240, transparent 40%),
+    radial-gradient(ellipse at 80% 50%, #4a176a30, transparent 45%);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 6%;
+  border-bottom: 1px solid #dc83ff50;
+  background: #100718ed;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  color: var(--pink);
+  font-size: 25px;
+  white-space: nowrap;
+}
+
+nav a {
+  color: #f6d9ff;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0 8px;
+}
+
+nav a:hover { color: var(--pink); }
+
+.hero {
+  min-height: 85vh;
+  padding: 90px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background:
+    linear-gradient(90deg, #0b0612dd, #19091d99, #0b0612dd),
+    radial-gradient(circle at 50% 50%, #74265e, #15091d 70%);
+  border-bottom: 1px solid #df8dff55;
+}
+
+.hero::before {
+  content: "♡  ✦  ♡  ✧  ♡";
+  position: absolute;
+  top: 45px;
+  color: #ff9be888;
+  letter-spacing: 22px;
+  font-size: 22px;
+}
+
+.eyebrow {
+  color: var(--pink);
+  letter-spacing: 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, .script {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 500;
+}
+
+h1 {
+  color: var(--pink);
+  font-size: clamp(48px, 9vw, 82px);
+  line-height: 1.15;
+  margin: 22px 0;
+  text-shadow: 0 0 30px #ff83e755;
+}
+
+.hero p {
+  max-width: 550px;
+  color: #f5dff5;
+  font-size: 14px;
+  line-height: 2;
+}
+
+button {
+  background: linear-gradient(120deg, #ff9fe8, #d7a0ff);
+  color: #32102f;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font: 600 13px 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: .25s;
+  box-shadow: 0 0 25px #ee85ff30;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 30px #ee85ff60;
+}
+
+section {
+  padding: 65px 6%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.section-title {
+  color: var(--pink);
+  font-size: 42px;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: #d8bbdf;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.card {
+  background: linear-gradient(140deg, #1b0e27, #100817);
+  border: 1px solid #c46aff65;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 35px #0003;
+}
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.nickname {
+  padding: 11px 17px;
+  border: 1px solid #e38cff85;
+  color: #ffe0fb;
+  border-radius: 30px;
+  background: #c16cff0b;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.nickname:hover {
+  background: #d37bff25;
+  transform: translateY(-3px);
+}
+
+.message-box {
+  text-align: center;
+  max-width: 650px;
+  margin: 28px auto;
+}
+
+.message-text {
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffe1fa;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 28px;
+}
+
+h3 {
+  color: var(--pink);
+  font-size: 30px;
+  margin: 0 0 15px;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 2;
+  color: #f2ddf6;
+}
+
+.emoji {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.letter {
+  background: linear-gradient(135deg, #25102c, #130a1b);
+  border-color: #ed9bdc88;
+  padding: clamp(22px, 5vw, 48px);
+}
+
+.letter p { font-size: 14px; }
+
+.signature {
+  font-family: 'Dancing Script', cursive;
+  color: var(--pink) !important;
+  font-size: 28px !important;
+}
+
+.reminder {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 14px 0;
+}
+
+.reminder span { color: var(--pink); }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.gallery-card {
+  min-height: 155px;
+  border: 1px solid #e28cff60;
+  border-radius: 16px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 20%, #9b388c55, transparent 70%),
+    #160b20;
+  transition: .3s;
+}
+
+.gallery-card:hover { transform: translateY(-5px); }
+
+.gallery-card .big { font-size: 38px; }
+
+.gallery-card p {
+  font-family: 'Dancing Script', cursive;
+  color: #ffc5f4;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.final {
+  text-align: center;
+  padding: 65px 20px;
+  border-top: 1px solid #d67aff55;
+  background: #100718;
+}
+
+.final h2 {
+  color: var(--pink);
+  font-size: 42px;
+}
+
+.final p { font-size: 12px; color: #d9bfe6; }
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #c99bda;
+  font-size: 11px;
+}
+
+.float-heart {
+  position: fixed;
+  bottom: -35px;
+  pointer-events: none;
+  z-index: 99;
+  animation: floatUp linear forwards;
+  filter: drop-shadow(0 0 7px #ff80db);
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+#surprise {
+  display: none;
+  margin: 22px auto 0;
+  max-width: 500px;
+  color: #ffd5f6;
+  line-height: 2;
+  font-size: 14px;
+}
+
+#surprise.show { display: block; animation: appear .7s ease; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width: 700px) {
+  nav { padding: 12px 4%; flex-wrap: wrap; }
+  .logo { font-size: 21px; }
+  nav div { display: flex; flex-wrap: wrap; gap: 9px; }
+  nav a { margin: 0; font-size: 10px; }
+  .grid { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  section { padding: 48px 5%; }
+  .hero { min-height: 78vh; }
+  .section-title { font-size: 36px; }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">For My Pasandida Aurat ♡</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#nicknames">Nicknames</a>
+    <a href="#wishes">Wishes</a>
+    <a href="#letter">My Letter</a>
+    <a href="#forever">Forever Us ♡</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="eyebrow">♡ A little surprise, made with love ♡</div>
+  <h1>Happy Navratri<br>My Pasandida Aurat ♡</h1>
+  <p>
+    To the girl who makes my ordinary days feel magical...
+    may this beautiful Navratri bring you endless happiness,
+    peaceful moments, beautiful opportunities, and a thousand
+    reasons to smile. You deserve all the good things in this world,
+    my princess. ♡
+  </p>
+  <button onclick="document.getElementById('nicknames').scrollIntoView({behavior:'smooth'})">
+    ♡ Open Your Little Surprise ↓
+  </button>
+  <div style="margin-top:28px;color:#f4a9ed;font-size:23px">✧ ♡ ✧</div>
+</header>
+
+<section id="nicknames">
+  <h2 class="section-title">Your Special Nicknames 🎀</h2>
+  <p class="subtitle">Because one name could never be enough for someone as special as you...</p>
+
+  <div class="names">
+    <span class="nickname" onclick="sayName('My Princess 👑')">My Princess ♡</span>
+    <span class="nickname" onclick="sayName('Babyyy 🧸')">Babyyy ♡</span>
+    <span class="nickname" onclick="sayName('Sweetheart 💗')">Sweetheart ♡</span>
+    <span class="nickname" onclick="sayName('Rasmalaiii 🍬')">Rasmalaiii ♡</span>
+    <span class="nickname" onclick="sayName('Madam Jiii 🎀')">Madam Jiii ♡</span>
+    <span class="nickname" onclick="sayName('Little Princess 🦢')">Little Princess ♡</span>
+    <span class="nickname" onclick="sayName('Meri Jaan 🫀')">Meri Jaan ♡</span>
+    <span class="nickname" onclick="sayName('My Sunshine ☀️')">My Sunshine ♡</span>
+    <span class="nickname" onclick="sayName('My Favourite Person 💌')">My Favourite Person ♡</span>
+    <span class="nickname" onclick="sayName('My Peace 🌷')">My Peace ♡</span>
+    <span class="nickname" onclick="sayName('My Everything 💞')">My Everything ♡</span>
+    <span class="nickname" onclick="sayName('My Pasandida Aurat 💗')">My Pasandida Aurat ♡</span>
+  </div>
+
+  <div class="card message-box">
+    <div class="emoji">💌</div>
+    <h3>A Tiny Message For You</h3>
+    <div class="message-text" id="nameMessage">
+      Click any of your cute nicknames above, babyyy. I have a little message for you. ♡
+    </div>
+    <button onclick="nextMessage()">Another Little Message ♡</button>
+  </div>
+</section>
+
+<section id="wishes">
+  <h2 class="section-title">My Navratri Wishes For You 🪷</h2>
+  <p class="subtitle">If I could wish a thousand beautiful things for you, these would be the first...</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="emoji">🌷</div>
+      <h3>For Your Happiness</h3>
+      <p>
+        May your smile never lose its sparkle. May your days be filled
+        with little surprises, genuine laughter, warm hugs from the
+        people you love, and moments that make your heart feel full.
+        You deserve happiness that stays. ♡
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">✨</div>
+      <h3>For Your Dreams</h3>
+      <p>
+        May every dream you hold close slowly become your reality.
+        May you always believe in yourself, find courage on difficult
+        days, and discover beautiful opportunities along your journey.
+        I will always be cheering for you, my girl. ♡
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🕯️</div>
+      <h3>For Your Peace</h3>
+      <p>
+        May your heart feel lighter, your worries become smaller,
+        and your life have more peaceful mornings and cozy evenings.
+        I hope you always feel safe being yourself and never forget
+        how precious you are. ♡
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">💗</div>
+      <h3>For Our Little World</h3>
+      <p>
+        May we create more silly memories, share countless smiles,
+        understand each other better, and keep choosing kindness
+        even on difficult days. The little moments with you mean
+        more to me than you know. ♡
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="letter">
+  <h2 class="section-title">A Letter Just For You 💌</h2>
+  <p class="subtitle">Read this slowly, my sweetheart. Every word is here for you. ♡</p>
+
+  <div class="card letter">
+    <h3>My Dearest Babyyy, 🎀</h3>
+
+    <p>Happy Navratri to my favourite person in this entire world. ♡</p>
+
+    <p>
+      I just wanted to make something small and special for you,
+      something you could open and smile at whenever you needed
+      a little reminder of how loved and appreciated you are.
+    </p>
+
+    <p>
+      You know what makes you so special to me? It is not just
+      your smile or the way you make my day better. It is the
+      little things about you, your heart, your kindness, your
+      silly moments, and all the tiny details that make you
+      completely, wonderfully YOU.
+    </p>
+
+    <p>
+      This Navratri, I hope life gives you more reasons to smile
+      than you can count. I hope your worries become lighter,
+      your dreams grow bigger, and you always remember that
+      you deserve love that is gentle, honest, patient, and real.
+    </p>
+
+    <p>
+      And whenever life gets a little difficult, I hope you
+      remember that you don't have to be perfect every day.
+      You can have quiet days, tired days, and days when
+      nothing goes according to plan. You are still wonderful
+      on every single one of them, my princess.
+    </p>
+
+    <p>
+      Thank you for being such a beautiful part of my world.
+      If I could give you one gift that would last forever,
+      it would be the ability to see yourself through my eyes
+      and understand just how special you are to me.
+    </p>
+
+    <p>
+      So, my little rasmalaiii, keep smiling, keep dreaming,
+      keep being your adorable self, and never forget that
+      there is someone who is always wishing beautiful things
+      for you. 💗
+    </p>
+
+    <p>I love you, today, tomorrow, and through all the little moments yet to come. ♡</p>
+
+    <p class="signature">From your shauryaa ♡</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Little Reminders For My Girl ♡</h2>
+
+  <div class="card">
+    <div class="reminder"><span>♡</span><div>You are beautiful, even on the days you don't feel your best.</div></div>
+    <div class="reminder"><span>♡</span><div>You are capable of doing wonderful things, and I believe in you.</div></div>
+    <div class="reminder"><span>♡</span><div>You deserve kindness, respect, patience, and a love that feels safe.</div></div>
+    <div class="reminder"><span>♡</span><div>You don't have to do everything perfectly to make me proud of you.</div></div>
+    <div class="reminder"><span>♡</span><div>Your happiness matters. Your dreams matter. And you matter so much.</div></div>
+    <div class="reminder"><span>♡</span><div>Never forget that you are someone's favourite notification, favourite smile, and favourite person. 🧸</div></div>
+  </div>
+</section>
+
+<section id="forever">
+  <h2 class="section-title">Our Little World 🌙</h2>
+  <p class="subtitle">A few little things that remind me of you...</p>
+
+  <div class="gallery">
+    <div class="gallery-card"><div class="big">🌙</div><p>Same sky, same dreams ♡</p></div>
+    <div class="gallery-card"><div class="big">💞</div><p>You + Me = Happy ♡</p></div>
+    <div class="gallery-card"><div class="big">☕</div><p>Cozy moments together ♡</p></div>
+    <div class="gallery-card"><div class="big">🌷</div><p>Flowers for my favourite girl ♡</p></div>
+    <div class="gallery-card"><div class="big">💌</div><p>Little notes, lots of love ♡</p></div>
+    <div class="gallery-card"><div class="big">✨</div><p>More memories to come ♡</p></div>
+  </div>
+
+  <div class="card message-box" style="margin-top:30px">
+    <div class="emoji">🎀💗🎀</div>
+    <h3>One Last Little Surprise...</h3>
+    <p class="subtitle">I saved one more message just for you, princess.</p>
+    <button onclick="openSurprise()">Open My Heart ♡</button>
+
+    <div id="surprise">
+      If I could wrap up all my good wishes and send them
+      straight to you, I would. Until then, let this little
+      website remind you that you are appreciated, treasured,
+      and so very special. I hope this Navratri brings you
+      beautiful beginnings, happy endings, and countless
+      reasons to smile. ♡<br><br>
+      Happy Navratri, my babyyy. 🎀<br>
+      <span style="font-family:'Dancing Script';font-size:29px;color:#ff9be8">
+        Forever sending you love ♡
+      </span>
+    </div>
+  </div>
+</section>
+
+<footer class="final">
+  <h2>Happy Navratri, My Love ♡</h2>
+  <p>May your life always be filled with love, light, peace, and happiness.</p>
+  <p style="font-family:'Dancing Script';font-size:26px;color:#ff9be8">
+    From your shauryaa ♡
+  </p>
+  <p>Made with a little bit of magic and a whole lot of love. 🎀</p>
+  <div style="font-size:24px;color:#ff9be8">♡ ∞ ♡</div>
+</footer>
+
+<script>
+const messages = [
+  "You are my favourite kind of happiness, the kind that sneaks into an ordinary day and makes everything feel a little more beautiful. ♡",
+  "If I could give you one thing, it would be the ability to see yourself through my eyes. Then you would understand why you are so special to me. 💗",
+  "My princess, I hope you never settle for less than the kindness, respect, and happiness you deserve. You are precious. 🎀",
+  "Babyyy, your smile deserves its own little celebration. I hope this Navratri gives you a thousand reasons to wear it. 🌷",
+  "You don't need to be perfect to be wonderful. You just need to be your adorable self, and that is already so much. 🧸",
+  "Dear rasmalaiii, even the smallest moments can become beautiful memories when they are shared with someone special. 💌",
+  "Madam jiii, official reminder from your shauryaa: drink water, take care of yourself, chase your dreams, and keep that lovely smile. ♡",
+  "Out of all the little things life can give us, meeting someone who makes the world feel warmer is truly special. I appreciate you so much. 💞"
+];
+
+let messageIndex = 0;
+
+function nextMessage() {
+  const box = document.getElementById("nameMessage");
+  messageIndex = (messageIndex + 1) % messages.length;
+  box.style.opacity = 0;
+
+  setTimeout(() => {
+    box.textContent = messages[messageIndex];
+    box.style.opacity = 1;
+  }, 200);
+}
+
+function sayName(name) {
+  const box = document.getElementById("nameMessage");
+  box.textContent = name + " — you deserve all the happiness, all the gentle moments, and all the beautiful things this world has to offer. Sending you the biggest virtual hug! ♡";
+  box.scrollIntoView({behavior: "smooth", block: "center"});
+  makeHearts(7);
+}
+
+function openSurprise() {
+  const surprise = document.getElementById("surprise");
+  surprise.classList.toggle("show");
+
+  if (surprise.classList.contains("show")) {
+    makeHearts(25);
+  }
+}
+
+function makeHearts(count = 5) {
+  const symbols = ["♡", "💗", "💕", "✨", "🎀"];
+  for (let i = 0; i < count; i++) {
+    const heart = document.createElement("span");
+    heart.className = "float-heart";
+    heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (14 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7500);
+  }
+}
+
+setInterval(() => makeHearts(1), 1800);
+</script>
+
+</body>
+</html>
